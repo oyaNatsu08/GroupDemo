@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>入力フォーム</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="/css/base.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <button type="button" @click="openPopup">フォームを開く</button>
+
+    {{ isPopupOpen }}
+
+    <div v-if="isPopupOpen" id="popup-overlay" @click.self="closePopup">
+      <div id="popup">
+        <form>
+          <h2>入力フォーム</h2>
+          <label v-for="name">名前:</label>
+          <input type="text" v-model="formData.name" ><br><br>
+
+          <label v-for="email">Eメール:</label>
+          <input type="email" v-model="formData.email" ><br><br>
+
+          <div class="buttons">
+            <input type="submit" value="送信">
+            <button type="button" @click.self="closePopup">閉じる</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

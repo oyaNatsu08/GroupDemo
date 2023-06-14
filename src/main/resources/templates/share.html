@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>共有画面</title>
+    <link href="/css/base.css" rel="stylesheet">
+</head>
+<body>
+<div class="center">
+
+    <h2 style="margin-top: 30px;">新規登録</h2>
+
+    <div class="login-form">
+        <form action="/url" method="post">
+
+            <p style="margin-bottom: 10px;">
+                <span class="margin-right">コミュニティ名</span>
+                <input type="text" name="name">
+            </p>
+
+            <p>
+                <button type="submit" class="btn btn-primary" th:text="共有"></button>
+            </p>
+
+        </form>
+    </div>
+
+</body>
+</html>

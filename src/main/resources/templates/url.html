@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>共有URL画面</title>
+</head>
+<body>
+    <h1 th:text="共有URL"></h1>
+    <a th:href="@{comunity/{randomString}/{code}(code=${code}, randomString=${randomString})}" th:text="${code}"></a>
+</body>
+</html>
