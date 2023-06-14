@@ -27,36 +27,7 @@
   </style>
 </head>
 <body>
-  <div id="app">
-    <button type="button" @click="openPopup">フォームを開く</button>
 
-    <h1>TEST</h1>
-    <h3>AAAAAA</h3><h1>TEST</h1>
-    <h3>AAAAAA</h3><h1>TEST</h1>
-    <h3>AAAAAA</h3><h1>TEST</h1>
-    <h3>AAAAAA</h3><h1>TEST</h1>
-
-
-    {{ isPopupOpen }}
-
-    <div v-if="isPopupOpen" id="popup-overlay" @click.self="closePopup">
-      <div id="popup">
-        <form>
-          <h2>入力フォーム</h2>
-          <label v-for="name">名前:</label>
-          <input type="text" v-model="formData.name" ><br><br>
-
-          <label v-for="email">Eメール:</label>
-          <input type="email" v-model="formData.email" ><br><br>
-
-          <div class="buttons">
-            <input type="submit" value="送信">
-            <button type="button" @click.self="closePopup">閉じる</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
   <script src="/js/main.js"></script>
 </body>
