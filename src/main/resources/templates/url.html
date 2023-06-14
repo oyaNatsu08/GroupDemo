@@ -5,6 +5,7 @@
     <title>共有URL画面</title>
 </head>
 <body>
+<h1>内間安寿テスト</h1>
     <h1 th:text="共有URL"></h1>
     <a th:href="@{comunity/{randomString}/{code}(code=${code}, randomString=${randomString})}" th:text="${code}"></a>
 
